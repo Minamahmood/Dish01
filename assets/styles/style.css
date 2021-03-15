@@ -58,3 +58,10 @@ form ion-icon{
   color: rgb(196, 117, 192) ;
   display: inline-block;
 }
+.search-result{
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-gap: 25px;
+  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
