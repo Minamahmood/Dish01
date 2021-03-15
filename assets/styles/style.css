@@ -51,3 +51,10 @@ input{
   background-color: rgb(223, 223, 223);
   display: inline-block;
 }
+form ion-icon{
+  width: 8%;
+  font-size: 3rem;
+  margin-bottom: -8px;
+  color: rgb(196, 117, 192) ;
+  display: inline-block;
+}
