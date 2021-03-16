@@ -4,20 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dish</title>
-  <link rel="stylesheet" href="./assets/styles/style.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 <body>
   <section>
     <div class="container initial">
       <h1 class="brand">Recipe App</h1>
-      <form>
+      <form id="recipeSearch">
+        <!--id is given-->
         <input type="text" placeholder="Search Your Recipe...">
         <!--save btn-->
-        <!-- <button onclick="save()" id="savedText">SAVE</button> -->
+         
         <ion-icon name="search"></ion-icon>
+        <button id="recipeSearchBtn" type="submit" class="waves-effect waves-light btn">Search</button>
+ 
       </form>
-      <form>
-        <input type="text" placeholder="Search Your Nutrition Recipe...">
+      <form id="nutritionSearch">
+        <input  type="text" placeholder="Search Your Nutrition Recipe...">
         <ion-icon name="search"></ion-icon>
       </form>
       <div class="search-result">
@@ -34,6 +41,8 @@
   </section>
 
       </form>
+      <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
   <script src="./assets/scripts/script.js"></script>
