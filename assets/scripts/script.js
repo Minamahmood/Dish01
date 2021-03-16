@@ -44,7 +44,7 @@ async function nutritionFetchApi(){
   const baseURL =`https://api.edamam.com/api/nutrition-data?app_id=${appNutrition_ID}&app_key=${appNutrition_key}&ingr=1${searchQuery}`;
   const response = await fetch(baseURL); 
   const data = await response.json();
-  //generateHTML(data.hits)
+  generateHTML(data.hits)
   console.log(data);
 }
 
@@ -66,6 +66,19 @@ function generateHTML(results){
     `
   })
   searchResultDiv.innerHTML = generatedHTML;
+}
+///////////////////////////////////////////////////////////////////////
+function generatedNutrition(results){
+  container.classList.remove('initial');
+  let nutritionHTML= '';
+  results.map(result => {
+   nutritionHTML += `
+      <div class="item">
+       ${results.healthLabels}
+      </div>
+    `
+  })
+  searchResultDiv.innerHTML = nutritionHTML;
 }
 //save to local storge //
 // var storedItem = localStorage.getItem("storedItem");
