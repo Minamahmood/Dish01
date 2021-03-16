@@ -12,7 +12,6 @@ html{
   font-family: 'Nunito';
   font-size: 12px;
 }
-
 section{
   min-height: 100vh;
   width: 100%;
@@ -119,7 +118,6 @@ form ion-icon{
   padding: 20px;
   font-size: 3rem;
 }
-
 @media (max-width: 768px){
   .search-result{
     grid-gap:10px
