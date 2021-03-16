@@ -7,12 +7,14 @@ const APP_ID = "cf2a6181";
 const APP_key = "2636e7bf0909d931f93613bbdc0d57c0";
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // Application Keys :ca209bae08f31367dac0eb37d98a78fd	-------->Nutrition
-// Application ID :81ea45e5 ----->Nutrition
+ //Application ID :81ea45e5 ----->Nutrition
  //URL =https://api.edamam.com/api/nutrition-details
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-//const Appnutrition_ID = "81ea45e5";
-//const Appnutrition_key ="ca209bae08f31367dac0eb37d98a78fd";
-
+const appNutrition_ID = "81ea45e5";
+const appNutrition_key ="ca209bae08f31367dac0eb37d98a78fd";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//curl "https://api.edamam.com/api/nutrition-data?app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&ingr=1%20large%20apple"
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 recipeSearch.addEventListener('submit', (e) => {
   e.preventDefault();//  the behavior of our form
   searchQuery = e.target.querySelector('input').value;
@@ -27,18 +29,25 @@ async function fetchAPI(){
   console.log(data);
 }
 
-// searchForm.addEventListener('submit', (e) => {
-//   e.preventDefault();//  the behavior of our form
-//   searchQuery = e.target.querySelector('input').value;
-//   fetchAPI();
-// })
-// async function fetchAPI(){ 
-//   const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APPNutrition_ID}&app_key=${Appnutrition_key}&from=0&to=20`;
-//   const response = await fetch(baseURL); 
-//   const data = await response.json();
-//   generateHTML(data.hits)
-//   console.log(data);
-// }
+nutritionSearch.addEventListener('submit', (e) => {
+  e.preventDefault();
+  //searchQuery = e.target.querySelector('input').value;
+  //var encodedQuery = encodeURI(searchQuery);
+  let searchQuery = () => {
+    encodedURI(e.target.querySelector('input').value)
+  }
+  //console.log("encodedQuery" ,encodedQuery);
+  nutritionFetchApi(); 
+  console.log("searchQuery", searchQuery);
+})
+async function nutritionFetchApi(){ 
+  const baseURL =`https://api.edamam.com/api/nutrition-data?app_id=${appNutrition_ID}&app_key=${appNutrition_key}&ingr=1${searchQuery}`;
+  const response = await fetch(baseURL); 
+  const data = await response.json();
+  //generateHTML(data.hits)
+  console.log(data);
+}
+
 function generateHTML(results){
   container.classList.remove('initial');
   let generatedHTML= '';
