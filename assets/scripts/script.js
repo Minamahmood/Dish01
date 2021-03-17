@@ -1,3 +1,7 @@
+let momentVar = moment().format('dddd, MMMM Do, YYYY h:mm a');//store it
+
+var storedItem = JSON.parse (localStorage.getItem("storedItem"));
+console.log(storedItem)
 const searchForm = document.querySelector("form"); // we have only one form
 const searchResultDiv = document.querySelector(".search-result"); // the div for the search(the food pics and info)
 const container = document.querySelector(".container");
@@ -26,32 +30,38 @@ async function fetchAPI() {
     const response = await fetch(baseURL);
     const data = await response.json();
     generateHTML(data.hits);
+    document.getElementById("savedText").innerHTML = storedItem[0]+" eating at "+storedItem[1]
     console.log(data);
 }
-// nutritionSearch.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//searchQuery = e.target.querySelector('input').value;
-//var encodedQuery = encodeURI(searchQuery);
-// let searchQuery = () => {
-//   encodedURI(e.target.querySelector('input').value)
-// }
-//console.log("encodedQuery" ,encodedQuery);
-//   nutritionFetchApi();
-//   console.log("searchQuery", searchQuery);
-// })
-// async function nutritionFetchApi(){
-//   const baseURL =`https://api.edamam.com/api/nutrition-data?app_id=${appNutrition_ID}&app_key=${appNutrition_key}&ingr=1${searchQuery}`;
-//   const response = await fetch(baseURL);
-//   const data = await response.json();
-//   generateHTML(data.hits)
-//   console.log(data);
-// }
+var nutritionSearch = document.querySelector ("#nutritionSearch");
+nutritionFetchApi() 
+
+nutritionSearch.addEventListener('submit', (e) => {
+  e.preventDefault();
+searchQuery = e.target.querySelector('input').value;
+var encodedQuery = encodeURI(searchQuery);
+let searchQuery = () => {
+  encodedURI(e.target.querySelector('input').value)
+}
+console.log("encodedQuery" ,encodedQuery);
+  nutritionFetchApi();
+  console.log("searchQuery", searchQuery);
+})
+async function nutritionFetchApi(){
+  const baseURL =`https://api.edamam.com/api/nutrition-data?app_id=${appNutrition_ID}&app_key=${appNutrition_key}&ingr=500%20g%20bread%20flour`;
+  const response = await fetch(baseURL);
+  const data = await response.json();
+  if(data)
+  // generateHTML(data.hits)
+  console.log(data);
+}
 function generateHTML(results) {
     container.classList.remove("initial");
     let generatedHTML = "";
     results.map((result) => {
         generatedHTML += `
-      <div class="item">
+      <div class="item" data-img="${result.recipe.image} "data-label="${result.recipe.label} "data-url="${
+        result.recipe.url}" data-calories=" ${result.recipe.calories.toFixed(2)}">
         <img src="${result.recipe.image}" alt="img">
         <div class="flex-container">
           <h1 class="title">${result.recipe.label}</h1>
@@ -63,7 +73,7 @@ function generateHTML(results) {
         <div onload="get()">
         <p id="savedText"></p>
         <p id="openedText"></p>
-        <button onclick="save()">SAVE</button>
+        <button onclick="save(event)">SAVE</button>
         <p class="item-data">Calories: ${result.recipe.calories.toFixed(2)}</p>
         <p class="item-data">Diet label: ${
           result.recipe.dietLabels.length > 0
@@ -87,15 +97,21 @@ function generateHTML(results) {
 //       </div>
 //     `
 //   })
-//   searchResultDiv.innerHTML = nutritionHTML;
+ //searchResultDiv.innerHTML = nutritionHTML;
 // }
 
 //save to local storge
-var storedItem = localStorage.getItem("storedItem");
-function save() {
-    var Item = document.getElementById("input").value;
-    localStorage.setItem("storedItem", Item);
-    document.getElementById("savedText").innerHTML = Item + "SAVED";
+
+function save(e) {
+  console.log(e.target.parentElement.parentElement)
+
+  var tmp =(e.target.parentElement.parentElement)
+  var recipe ={img:tmp.dataset.img}
+  console.log(recipe)
+    var Item =[document.getElementById("input").value,momentVar] 
+    console.log(Item);
+    localStorage.setItem("storedItem", JSON.stringify(Item) ) 
+ 
 }
 function git() {
     localStorage.getItem("storedItem");
