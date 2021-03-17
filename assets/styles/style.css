@@ -48,7 +48,6 @@ input[type="text"]{
   padding: 10px;
   border-radius: 30px;
   border: none;
-  /* outline: dis; */
   font-size: 2rem;
   background-color: rgb(223, 223, 223);
   display: inline-block;
@@ -98,7 +97,7 @@ input[type="text"]{
   font-size: 1.4rem;
   font-weight: 600;
   margin-top: 20px;
-  /* border-radius: 4px; */
+  border-radius: 4px;
   align-self:flex-start;
 }
 .item-data{
@@ -115,10 +114,10 @@ input[type="text"]{
 .container.initial form {
   max-width: 800px;
 }
-/* .container.initial form input{
+.container.initial form input{
   padding: 20px;
   font-size: 3rem;
-}  */
+} 
 @media (max-width: 768px){
   .search-result{
     grid-gap:10px
@@ -141,4 +140,8 @@ input[type="text"]{
   height: 60px;
   line-height: 60px;
   font-size: larger;
+}
+#aboutus{
+  background-size: cover;
+  background-color: rgb(231, 231, 121);
 }

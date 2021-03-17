@@ -1,6 +1,5 @@
-let momentVar = moment().format('dddd, MMMM Do, YYYY h:mm a');//store it
-
-var storedItem = JSON.parse (localStorage.getItem("storedItem"));
+// let momentVar = moment().format('dddd, MMMM Do, YYYY h:mm a');
+var storedItem = JSON.parse(localStorage.getItem("storedItem"));
 console.log(storedItem)
 const searchForm = document.querySelector("form"); // we have only one form
 const searchResultDiv = document.querySelector(".search-result"); // the div for the search(the food pics and info)
@@ -52,7 +51,6 @@ async function nutritionFetchApi(){
   const response = await fetch(baseURL);
   const data = await response.json();
   if(data)
-  // generateHTML(data.hits)
   console.log(data);
 }
 function generateHTML(results) {
@@ -86,19 +84,7 @@ function generateHTML(results) {
     });
     searchResultDiv.innerHTML = generatedHTML;
 }
-//////////////////////////////////////////////////////////////////
-// function generatedNutrition(results){
-//   container.classList.remove('initial');
-//   let nutritionHTML= '';
-//   results.map(result => {
-//    nutritionHTML += `
-//       <div class="item">
-//        ${results.healthLabels}
-//       </div>
-//     `
-//   })
- //searchResultDiv.innerHTML = nutritionHTML;
-// }
+
 
 //save to local storge
 
