@@ -1,4 +1,4 @@
-// let momentVar = moment().format('dddd, MMMM Do, YYYY h:mm a');
+let momentVar = moment().format('dddd, MMMM Do, YYYY h:mm a');
 var storedItem = JSON.parse(localStorage.getItem("storedItem"));
 console.log(storedItem)
 const searchForm = document.querySelector("form"); // we have only one form
@@ -32,27 +32,32 @@ async function fetchAPI() {
     document.getElementById("savedText").innerHTML = storedItem[0]+" eating at "+storedItem[1]
     console.log(data);
 }
-var nutritionSearch = document.querySelector ("#nutritionSearch");
-nutritionFetchApi() 
 
-nutritionSearch.addEventListener('submit', (e) => {
-  e.preventDefault();
-searchQuery = e.target.querySelector('input').value;
-var encodedQuery = encodeURI(searchQuery);
-let searchQuery = () => {
-  encodedURI(e.target.querySelector('input').value)
-}
-console.log("encodedQuery" ,encodedQuery);
-  nutritionFetchApi();
-  console.log("searchQuery", searchQuery);
-})
-async function nutritionFetchApi(){
-  const baseURL =`https://api.edamam.com/api/nutrition-data?app_id=${appNutrition_ID}&app_key=${appNutrition_key}&ingr=500%20g%20bread%20flour`;
-  const response = await fetch(baseURL);
-  const data = await response.json();
-  if(data)
-  console.log(data);
-}
+//////////////////////////////////////////////////
+//nutrition //
+// var nutritionSearch = document.querySelector ("#nutritionSearch");
+// nutritionFetchApi() 
+
+// nutritionSearch.addEventListener('submit', (e) => {
+//   e.preventDefault();
+// searchQuery = e.target.querySelector('input').value;
+// var encodedQuery = encodeURI(searchQuery);
+// let searchQuery = () => {
+//   encodedURI(e.target.querySelector('input').value)
+// }
+// console.log("encodedQuery" ,encodedQuery);
+//   nutritionFetchApi();
+//   console.log("searchQuery", searchQuery);
+// })
+// async function nutritionFetchApi(){
+//   const baseURL =`https://api.edamam.com/api/nutrition-data?app_id=${appNutrition_ID}&app_key=${appNutrition_key}&ingr=500%20g%20bread%20flour`;
+//   const response = await fetch(baseURL);
+//   const data = await response.json();
+//   if(data)
+//   console.log(data);
+// }
+/////////////////////////////////////////////////
+//result//
 function generateHTML(results) {
     container.classList.remove("initial");
     let generatedHTML = "";
