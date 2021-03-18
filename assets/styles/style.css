@@ -9,7 +9,7 @@ section{
   align-items: center;
   justify-content: center;
   padding: 100px 0;
-  background-color: rgb(10, 10, 10);
+  background-color:#e65858;
 }
 .container{
   width: 100%;
@@ -143,5 +143,19 @@ input[type="text"]{
 }
 #aboutus{
   background-size: cover;
-  background-color: rgb(231, 231, 121);
+  background-color: #e65858;
 }
+
+footer {
+  background: #e65858;
+  width: 100%;
+  padding: 40px 35px;
+}
+
+footer h2 {
+  display: inline;
+  color: #0e0c0b;
+  font-size: 30px;
+  margin: 0;
+}
+
