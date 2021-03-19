@@ -29,7 +29,7 @@ async function fetchAPI() {
     const response = await fetch(baseURL);
     const data = await response.json();
     generateHTML(data.hits);
-    document.getElementById("savedText").innerHTML = storedItem[0]+" eating at "+storedItem[1]
+   if(storedItem.length >1) document.getElementById("savedText").innerHTML = storedItem[0]+" eating at "+storedItem[1]
     console.log(data);
 }
 
