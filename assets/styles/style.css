@@ -1,37 +1,51 @@
-
-html{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 12px;
 }
-section{
-  width: 100%;
+section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://thetable.homechef.com/wp-content/uploads/2016/06/spices.jpg);
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  width: auto;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 100px 0;
-  background-color:#e65858;
 }
-.container{
+.container {
   width: 100%;
   height: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
-.brand{
+.brand {
   font-style: italic;
-  text-align: center;
   font-size: 10rem;
-  color: rgb(12, 10, 10);
+  color: rgb(243, 235, 235);
   margin-bottom: 30px;
+  text-align: center;
+  margin-right: -770px;
 }
-form{
-  width: 90%;
+form {
+  width: 400px;
+  height: 50px;
+  top: 50%;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
   max-width: 400px;
   margin: 20px auto;
-  background-color: rgb(231, 123, 123);
+  background-color: rgb(243, 236, 236);
+  margin-right: 0;
 }
-button{
+button {
   border: 1px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -39,31 +53,33 @@ button{
   padding: 8px 10px;
   margin: 0;
 }
-
-input[type="text"]{
+input[type="text"] {
   width: 300px;
 }
- input{
+input {
   width: 90%;
   padding: 10px;
   border-radius: 30px;
   border: none;
   font-size: 2rem;
-  background-color: rgb(10, 9, 9);
+  background-color: rgb(248, 244, 244);
   display: inline-block;
 }
-#button {
-  top:60%;
-  right:20% ;
+.nav-wrapper {
+  background-color: #40403f;
 }
-.search-result{
+#button {
+  top: 60%;
+  right: 20%;
+}
+.search-result {
   margin-top: 50px;
   width: 100%;
   display: grid;
   grid-gap: 25px;
   grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
 }
-.item{
+.item {
   width: 100%;
   border-radius: 8px;
   background-color: rgb(14, 13, 13);
@@ -71,24 +87,24 @@ input[type="text"]{
   padding: 15px;
   overflow: hidden;
 }
-.item img{
+.item img {
   width: 100%;
   height: 300px;
-  border-radius: 4px ;
+  border-radius: 4px;
 }
-.flex-container{
+.flex-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.search-result .title{
+.search-result .title {
   color: whitesmoke;
   margin: 20px 10px 0 0;
   font-size: 1.8rem;
   font-weight: 400;
 }
-.view-btn{
-  text-decoration:black;
+.view-btn {
+  text-decoration: black;
   text-align: center;
   width: 130px;
   padding: 10px 0;
@@ -98,39 +114,39 @@ input[type="text"]{
   font-weight: 600;
   margin-top: 20px;
   border-radius: 4px;
-  align-self:flex-start;
+  align-self: flex-start;
 }
-.item-data{
+.item-data {
   color: whitesmoke;
   display: block;
-  margin-top: 10px ;
+  margin-top: 10px;
   font-size: 1.4rem;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
   line-height: 2rem;
 }
-.container.initial .brand{
+.container.initial .brand {
   font-size: 7rem;
 }
 .container.initial form {
   max-width: 800px;
 }
-.container.initial form input{
+.container.initial form input {
   padding: 20px;
   font-size: 3rem;
-} 
-@media (max-width: 768px){
-  .search-result{
-    grid-gap:10px
+}
+@media (max-width: 768px) {
+  .search-result {
+      grid-gap: 10px;
   }
-  .container.initial .brand{
-    font-size: 4rem;
+  .container.initial .brand {
+      font-size: 4rem;
   }
   .container.initial form {
-    max-width: 500px;
+      max-width: 500px;
   }
-  .container.initial form input{
-    padding: 10px;
-    font-size: 2rem;
+  .container.initial form input {
+      padding: 10px;
+      font-size: 2rem;
   }
 }
 .sticky-footer {
@@ -141,26 +157,23 @@ input[type="text"]{
   line-height: 60px;
   font-size: larger;
 }
-#aboutus{
-  background-size: cover;
-  background-color: #f18484;
+#aboutus {
+  color: aliceblue;
 }
-
 footer {
-  background: #e65858;
+  background-color: #3e3d3c;
   width: 100%;
   padding: 40px 35px;
+  color: #f3f1f0;
 }
-
 footer h2 {
   display: inline;
-  color: #0e0c0b;
+  color: #f3f1f0;
   font-size: 30px;
   margin: 0;
 }
-#contact{
-    background-size: cover;
-    background-color: #f18484;
-  }
-
-
+#contact {
+  color: aliceblue;
+  margin-right: -800px;
+  font-size: large;
+}
