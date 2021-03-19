@@ -159,6 +159,7 @@ input {
 }
 #aboutus {
   color: aliceblue;
+  margin-right: -800px;
 }
 footer {
   background-color: #3e3d3c;
