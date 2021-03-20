@@ -60,10 +60,12 @@ input {
   width: 90%;
   padding: 10px;
   border-radius: 30px;
-  border: none;
+  border: none !important;
+
   font-size: 2rem;
   background-color: rgb(248, 244, 244);
   display: inline-block;
+  text-decoration: none;
 }
 .nav-wrapper {
   background-color: #40403f;
