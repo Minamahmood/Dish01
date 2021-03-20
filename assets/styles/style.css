@@ -45,6 +45,7 @@ form {
   background-color: rgb(243, 236, 236);
   margin-right: 0;
 }
+
 button {
   border: 1px;
   border-top-left-radius: 4px;
@@ -53,20 +54,22 @@ button {
   padding: 8px 10px;
   margin: 0;
 }
-input[type="text"] {
-  width: 100px;
-}
+
+input p {
+  font-size: 16px;
+} 
+
 input {
   width: 90%;
   padding: 10px;
   border-radius: 30px;
   border: none !important;
-
-  font-size: 2rem;
   background-color: rgb(248, 244, 244);
   display: inline-block;
+  font-size: 16px !important;
   text-decoration: none;
 }
+
 .nav-wrapper {
   background-color: #40403f;
 }
@@ -84,9 +87,7 @@ input {
 .item {
   width: 100%;
   border-radius: 8px;
-  background-color: rgb(14, 13, 13);
   color: azure;
-  padding: 15px;
   overflow: hidden;
 }
 .item img {
@@ -98,6 +99,10 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.card {
+  padding: 20px;
+  overflow:auto
 }
 .search-result .title {
   color: whitesmoke;

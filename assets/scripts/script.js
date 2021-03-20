@@ -63,27 +63,31 @@ function generateHTML(results) {
     let generatedHTML = "";
     results.map((result) => {
         generatedHTML += `
-      <div class="item" data-img="${result.recipe.image} "data-label="${result.recipe.label} "data-url="${
-        result.recipe.url}" data-calories=" ${result.recipe.calories.toFixed(2)}">
-        <img src="${result.recipe.image}" alt="img">
-        <div class="flex-container">
-          <h1 class="title">${result.recipe.label}</h1>
-          <a class="view-btn" target="_blank" href="${
-            result.recipe.url
-          }">View Recipe</a>
+      <div class="item">
+        <div class="card grey darken-2 medium">
+          <div class="card-image" data-img="${result.recipe.image} "data-label="${result.recipe.label} "data-url="${
+          result.recipe.url}" data-calories=" ${result.recipe.calories.toFixed(2)}">
+          <img src="${result.recipe.image}" alt="img"></div>
+          <div class="flex-container">
+            <h1 class="title">${result.recipe.label}</h1>
+            <a class="view-btn" target="_blank" href="${
+              result.recipe.url
+            }">View Recipe</a>
+          </div>
+          
+          <div onload="get()">
+          <p id="savedText"></p>
+          <p id="openedText"></p>
+          <button onclick="save(event)">SAVE</button>
+          <p class="item-data">Calories: ${result.recipe.calories.toFixed(2)}</p>
+          <p class="item-data">Diet label: ${
+            result.recipe.dietLabels.length > 0
+              ? result.recipe.dietLabels
+              : "No Data Found"
+          }</p>
+          <p class="item-data">Health labels: ${result.recipe.healthLabels}</p>
+            </div>
         </div>
-        
-        <div onload="get()">
-        <p id="savedText"></p>
-        <p id="openedText"></p>
-        <button onclick="save(event)">SAVE</button>
-        <p class="item-data">Calories: ${result.recipe.calories.toFixed(2)}</p>
-        <p class="item-data">Diet label: ${
-          result.recipe.dietLabels.length > 0
-            ? result.recipe.dietLabels
-            : "No Data Found"
-        }</p>
-        <p class="item-data">Health labels: ${result.recipe.healthLabels}</p>
       </div>
     `;
     });
