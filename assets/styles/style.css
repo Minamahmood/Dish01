@@ -10,7 +10,7 @@ section {
   /* Do not repeat the image */
   background-size: cover;
   /* Resize the background image to cover the entire container */
-  width: auto;
+  width: 100vw;
   height: auto;
   display: flex;
   align-items: center;
@@ -131,6 +131,9 @@ input {
   letter-spacing: 0.05rem;
   line-height: 2rem;
 }
+.container.initial {
+  width: 100vw;
+}
 .container.initial .brand {
   font-size: 7rem;
 }
@@ -142,15 +145,34 @@ input {
   font-size: 3rem;
 }
 @media (max-width: 768px) {
+
+  .brand {
+    position: absolute;
+    margin: auto;
+    margin-top: -10vh;
+    justify-items: center;
+
+  }
+  .brand h1 {
+    text-align: center !;
+    font-size: 5rem ;
+
+  }
+
   .search-result {
       grid-gap: 10px;
   }
   .container.initial .brand {
       font-size: 4rem;
   }
+  
   .container.initial form {
       max-width: 500px;
+      margin: auto;
+      justify-content: center;
+      text-align: center;
   }
+
   .container.initial form input {
       padding: 10px;
       font-size: 2rem;
@@ -182,6 +204,10 @@ footer h2 {
 }
 #contact {
   color: aliceblue;
-  margin-right: -800px;
   font-size: large;
+  margin-left: 70%;
+
+}
+#contact ul {
+  list-style-type: none;
 }
