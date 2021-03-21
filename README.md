@@ -27,9 +27,12 @@ Email:fadhaaabdullah8991@gmail.com</br>
 Mina Mahmood</br>
 Email:minamahmood83@gmail.com</br>
 Github page : Fadmin8989 
+
 ## Deployed
+ https://fadmin8989.github.io/Dish01/.
 
 ## Repo
+https://github.com/fadmin8989/Dish01/tree/develop
 
 ## License
 MIT License: A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
