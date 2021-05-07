@@ -1,0 +1,213 @@
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 12px;
+}
+section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://thetable.homechef.com/wp-content/uploads/2016/06/spices.jpg);
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+.container {
+  width: 100%;
+  height: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.brand {
+  font-style: italic;
+  font-size: 10rem;
+  color: rgb(243, 235, 235);
+  margin-bottom: 30px;
+  text-align: center;
+  margin-right: -770px;
+}
+form {
+  width: 400px;
+  height: 50px;
+  top: 50%;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: rgb(243, 236, 236);
+  margin-right: 0;
+}
+
+button {
+  border: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-size: 14px;
+  padding: 8px 10px;
+  margin: 0;
+}
+
+input p {
+  font-size: 16px;
+} 
+
+input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 30px;
+  border: none !important;
+  background-color: rgb(248, 244, 244);
+  display: inline-block;
+  font-size: 16px !important;
+  text-decoration: none;
+}
+
+.nav-wrapper {
+  background-color: #40403f;
+}
+#button {
+  top: 60%;
+  right: 20%;
+}
+.search-result {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-gap: 25px;
+  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+.item {
+  width: 100%;
+  border-radius: 8px;
+  color: azure;
+  overflow: hidden;
+}
+.item img {
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card {
+  padding: 20px;
+  overflow:auto
+}
+.search-result .title {
+  color: whitesmoke;
+  margin: 20px 10px 0 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.view-btn {
+  text-decoration: black;
+  text-align: center;
+  width: 130px;
+  padding: 10px 0;
+  background-color: #404041;
+  color: whitesmoke;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 20px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+.item-data {
+  color: whitesmoke;
+  display: block;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  line-height: 2rem;
+}
+.container.initial {
+  width: 100vw;
+}
+.container.initial .brand {
+  font-size: 7rem;
+}
+.container.initial form {
+  max-width: 800px;
+}
+.container.initial form input {
+  padding: 20px;
+  font-size: 3rem;
+}
+@media (max-width: 768px) {
+
+  .brand {
+    position: absolute;
+    margin: auto;
+    margin-top: -10vh;
+    justify-items: center;
+
+  }
+  .brand h1 {
+    text-align: center !;
+    font-size: 5rem ;
+
+  }
+
+  .search-result {
+      grid-gap: 10px;
+  }
+  .container.initial .brand {
+      font-size: 4rem;
+  }
+  
+  .container.initial form {
+      max-width: 500px;
+      margin: auto;
+      justify-content: center;
+      text-align: center;
+  }
+
+  .container.initial form input {
+      padding: 10px;
+      font-size: 2rem;
+  }
+}
+.sticky-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: larger;
+}
+#aboutus {
+  color: aliceblue;
+  margin-right: -800px;
+}
+footer {
+  background-color: #3e3d3c;
+  width: 100%;
+  padding: 40px 35px;
+  color: #f3f1f0;
+}
+footer h2 {
+  display: inline;
+  color: #f3f1f0;
+  font-size: 30px;
+  margin: 0;
+}
+#contact {
+  color: aliceblue;
+  font-size: large;
+  margin-left: 70%;
+
+}
+#contact ul {
+  list-style-type: none;
+}
